@@ -1,0 +1,47 @@
+Arrow Functions (Funciones de Flecha):
+Las arrow functions son una forma más concisa de escribir funciones en JavaScript. Se introdujeron en ECMAScript 6 y proporcionan una sintaxis más corta y clara para definir funciones.
+
+La sintaxis básica de una arrow function es la siguiente:
+// Sin parámetros
+const func = () => {
+  // Cuerpo de la función
+};
+
+// Con un parámetro
+const func = (param) => {
+  // Cuerpo de la función
+};
+
+// Con múltiples parámetros
+const func = (param1, param2) => {
+  // Cuerpo de la función
+};
+
+// Retorno de valor implícito
+const func = () => "Hola mundo";
+
+Las arrow functions tienen algunas características especiales, como la herencia del contexto "this", que hace que sea más fácil trabajar con funciones dentro de métodos de objetos y callbacks.
+
+
+Callbacks:
+
+En JavaScript, un callback es una función que se pasa como argumento a otra función y se invoca después de que se complete una operación asíncrona o algún otro tipo de evento. Los callbacks son fundamentales para trabajar con operaciones asíncronas en JavaScript, como solicitudes de red, operaciones de archivos y temporizadores.
+Un ejemplo básico de cómo se utiliza un callback:
+
+
+function doSomethingAsync(callback) {
+  // Simulación de una operación asincrónica que toma un tiempo
+  setTimeout(() => {
+    console.log("La operación asincrónica ha terminado");
+    callback(); // Llamar al callback una vez que la operación haya terminado
+  }, 1000);
+}
+
+function callbackFunction() {
+  console.log("El callback ha sido invocado");
+}
+
+// Llamar a la función doSomethingAsync y pasarle el callback
+doSomethingAsync(callbackFunction);
+
+En este ejemplo, "doSomethingAsync" es una función que realiza una operación asincrónica y toma un callback como argumento. Después de que la operación asincrónica se complete, se llama al callback.
