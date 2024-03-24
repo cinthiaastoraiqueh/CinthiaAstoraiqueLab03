@@ -10,6 +10,9 @@
 
   /*Resultado esperado: [5, 10, 15, 20, 25] */
 
+  const multipliedNumbers = numbers.map(num => num * 5);
+  console.log("Resultado del primer ejercicio:", multipliedNumbers);
+
   /* First excercise */
 
   /* Second excercise */
@@ -22,6 +25,9 @@
 
   /* Second excercise */
 
+  const sortedNames = names.sort();
+  console.log("Resultado del segundo ejercicio:", sortedNames);
+
   /* Thrid excercise */
 
   const data = ['a', 'b', 'z', 'r', 'a', 'c', 'r', 'a'];
@@ -30,6 +36,10 @@
   /* Resultado esperado: ['a', 'b', 'z', 'r', 'c'] */
 
   /* Thrid excercise */
+
+  const uniqueLetters = [...new Set(data)];
+  console.log("Resultado del tercer ejercicio:", uniqueLetters);
+
 
   /* Fourth excercise */
 
@@ -50,5 +60,10 @@
   */
 
   /* Fourth excercise */
+  const countLetters = largeWord.split('').reduce((acc, letter) => {
+    acc[letter] = (acc[letter] || 0) + 1;
+    return acc;
+  }, {});
+  console.log("Resultado del cuarto ejercicio:", countLetters);
 
 })();

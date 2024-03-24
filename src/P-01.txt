@@ -1,0 +1,66 @@
+El archivo .gitignore especifica qué archivos y carpetas deben ser ignorados por Git y no ser rastreados en el repositorio.
+
+Ejemplo:
+# Ignorar la carpeta "node_modules" generada por dependencias de Node.js
+node_modules/
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de configuración local
+.env
+
+En este ejemplo, node_modules/ indica que se debe ignorar la carpeta node_modules y *.log indica que se deben ignorar todos los archivos con la extensión .log.
+El archivo package.json es un archivo de metadatos para proyectos Node.js, utilizado para gestionar las dependencias, scripts y otra información del proyecto.
+
+Explicación de package.json:
+Ejemplo:
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "description": "Descripción de mi proyecto",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+
+En este ejemplo:
+
+name es el nombre del proyecto.
+version es la versión del proyecto.
+description es una descripción breve del proyecto.
+main indica el punto de entrada principal del proyecto.
+scripts contiene comandos de scripts que se pueden ejecutar con npm o yarn.
+dependencies lista las dependencias del proyecto junto con sus versiones.
+
+
+JavaScript Promesas
+
+Las promesas en JavaScript son objetos que representan la eventual finalización o falla de una operación asincrónica. Son utilizadas para manejar operaciones asíncronas de manera más limpia y evitar el llamado "callback hell" (anidamiento excesivo de funciones de callback).
+
+Las promesas tienen tres estados:
+1. Pendiente (pending): Estado inicial de una promesa, antes de que se cumpla o se rechace.
+2. Cumplida (fulfilled): La operación asincrónica se completó exitosamente.
+3. Rechazada (rejected): La operación asincrónica falló.
+
+Sintaxis básica de una promesa:
+
+```javascript
+const miPromesa = new Promise((resolve, reject) => {
+  // Realizar alguna operación asincrónica
+  if (operacionExitosa) {
+    resolve(resultado); // Si la operación se completa exitosamente
+  } else {
+    reject(error); // Si la operación falla
+  }
+});
+
+miPromesa.then((resultado) => {
+  // Manejar el resultado si la promesa se cumple
+}).catch((error) => {
+  // Manejar el error si la promesa es rechazada
+});
